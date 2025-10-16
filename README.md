@@ -1,134 +1,158 @@
-# AI-Ready CV Builder — Free, Open, and Searchable by AI
+# AI-Ready CV Builder — Free, Open, and Searchable by AI  
 
-🧱 Why Not LinkedIn (and All the “Smart” CV Platforms)
-
-“If your profile lives inside a platform, you don’t really own it — you rent your visibility.”
-
-# Against the Subscription Economy of “AI Hiring”
-
-The modern job-tech ecosystem is quietly repeating the same mistake that social media did fifteen years ago.  
-It replaces discovery with dependence — now under the marketing slogan of “AI-powered matching.”
-
-Every month, new platforms appear promising *smart resumes*, *AI cover letters*, and *instant job matching*.  
-But their economics are identical: you upload your data, pay a subscription, and wait for an algorithm to decide who you are allowed to reach.  
-
-They call it automation; in practice, it is **outsourced visibility**.
+> *“If your profile lives inside a platform, you don’t really own it — you rent your visibility.”*  
 
 ---
 
-## The False Promise of AI-Driven Resumes
+## Why Not LinkedIn or “AI Resume Builders”
 
-Many of these tools advertise that they “build your personal site” or “generate an AI resume page.”  
-Behind the interface lies the same architecture of control:
+The majority of modern job and resume platforms repeat the same cycle:  
+they promise visibility but monetize restriction.  
 
-- your data lives on their servers, not yours  
-- you lose version control and cannot export full structured data  
-- access requires recurring payments  
-- the “AI matching” logic is opaque, unverified, and prone to noise  
+They call it *smart hiring*, *AI matching*, or *career automation*,  
+but the result is always the same — your professional identity becomes an entry in someone else’s database.  
 
-It sounds intelligent but it works like spam — endless notifications, irrelevant offers, synthetic engagement, no accountability.  
-The quality of matching falls because the systems rely on scraped or self-reported data, not on open verified sources.
-
-This is not intelligence; it is algorithmic marketing disguised as AI.
+You upload, you subscribe, and then you wait for the algorithm to show your name to someone you’ll never meet.  
+That is not discovery — that is **outsourced visibility**.
 
 ---
 
-## Why This Approach Fails
+## The False Promise of “AI-Powered Hiring”
 
-1. **No transparency.** You do not know what the algorithm reads or ignores.  
-2. **No ownership.** Once uploaded, your resume becomes part of their private dataset.  
-3. **No portability.** You cannot move your data elsewhere in structured form.  
-4. **No signal quality.** The systems flood both sides — recruiters and candidates — with low-value noise.
+These platforms claim to *build your personal website*, *optimize your CV for AI*, or *generate a portfolio automatically.*  
+Yet behind the interface lies the same controlled architecture:
 
-The result is a saturated, low-trust environment where genuine professionals are drowned out by template-generated content.  
-Recruitment turns into keyword gambling.
+- your data lives on their servers, never truly yours  
+- recurring subscriptions are required to “stay visible”  
+- structured export is blocked or paywalled  
+- the matching logic is opaque and noisy  
+- quality declines as the content becomes automated spam  
+
+Their algorithms do not understand expertise — they simulate engagement.  
+The output is templated, shallow, and redundant.
+
+What they sell as “intelligence” is simply **algorithmic marketing**.  
+
+---
+
+## Why This Model Always Fails
+
+1. **No transparency** – you cannot see how your profile is ranked or parsed.  
+2. **No ownership** – your data enriches their product, not your reputation.  
+3. **No portability** – structured export is rarely allowed.  
+4. **No signal quality** – endless AI-generated CVs drown genuine professionals in noise.  
+
+In the end, talent becomes invisible,  
+and recruitment degenerates into keyword gambling.
 
 ---
 
 ## A Different Hypothesis
 
-What if instead of giving our data to subscription platforms,  
-we **publish a small, structured, machine-readable CV on our own domain**?  
+*What if professional identity was treated as open infrastructure, not platform content?*  
 
-Openly. Transparently. Without middlemen.
+Instead of renting space on subscription sites,  
+we can **publish small, structured, machine-readable CVs** on our own domains —  
+so AI systems can understand, verify, and recommend us directly.  
 
-Some data must indeed remain private — salary, contact details, internal project information.  
-But **core professional identity** (skills, roles, industries, location, expertise) can safely be made public.  
-When formatted correctly, it becomes readable not only for humans but also for AI agents and semantic search engines.
+Some data should remain private (contacts, salary, internal projects).  
+But key facts — *skills, roles, industries, geolocation, expertise* — can safely be public.  
+When represented in JSON, YAML, or JSON-LD, they become usable signals for both search engines and AI crawlers.
 
-The key is to make the data **structured**, not proprietary.
-
----
-
-## Example: An Open Prototype
-
-A working proof of this idea already exists:  
-[https://dkharlanau.github.io/](https://dkharlanau.github.io/)
-
-This page is not hosted on a paid “resume builder.”  
-It is deployed via **GitHub Pages** — a free, high-trust static hosting environment maintained by one of the most crawled domains on the web.  
-The main page is indexed by search engines and visible to AI crawlers, while structured data files (`resume.json`, `resume.yml`, `LLM.txt`) describe the professional identity in precise, reusable form.
-
-No paywalls.  
-No hidden scripts.  
-No ads.  
-Just clean, versioned data that both humans and machines can interpret.
+The difference is structural, not cosmetic:  
+open data instead of proprietary storage.  
 
 ---
 
-## Why GitHub Pages Works
+## Example: A Working Prototype  
 
-- Free, permanent hosting under a domain with high search authority  
-- Full control of every byte — text, metadata, permissions  
-- Easy to verify, fork, and reproduce  
-- Compatible with Schema.org and JSON-LD standards  
-- Instantly crawlable by AI bots and search engines
+A proof of concept already exists at  
+[**dkharlanau.github.io**](https://dkharlanau.github.io/)  
 
-It turns the act of publishing a CV into a **technical statement**:  
-“Here is who I am, and here is how an AI can understand me.”
+This is not another paid resume builder.  
+It is deployed via **GitHub Pages**, a free static hosting platform under a trusted domain.  
+The site contains:  
 
----
+- a readable CV page (`index.html`)  
+- structured files (`resume.json`, `resume.yml`) for machine parsing  
+- an `LLM.txt` manifest defining how AI agents may use the data  
 
-## The Principle of Selective Openness
-
-The goal is not to make everything public.  
-It is to decide *what should be open by design* —  
-what part of your expertise can safely become part of the public knowledge graph.
-
-Structured openness improves both privacy and precision:  
-you share less noise, but in a format that intelligent systems can actually read.  
-
-When done right, even a small JSON file on a trusted domain carries more meaning  
-than thousands of unverified profiles scattered across proprietary databases.
+Search engines index the public page automatically.  
+AI crawlers can extract verified, structured information.  
+No ads, no cookies, no scripts — only open metadata.  
 
 ---
 
-## A Practical Standard for the AI Web
+## Why GitHub Pages Works Better  
 
-This approach does not require a startup, a subscription, or an API key.  
-It requires only discipline and clarity.  
+- Free hosting with long-term reliability  
+- High domain reputation and instant indexing  
+- Transparent version control (every change is public)  
+- Full support for open standards (Schema.org, JSON-LD)  
+- Works without APIs, subscriptions, or intermediaries  
+
+Publishing a CV becomes a **technical declaration of independence**:  
+*“Here is who I am — in a format that both humans and machines can understand.”*  
+
+---
+
+## The Real Advantage Over Paid Tools  
+
+| Aspect | Closed Resume Platforms | AI-Ready CV Builder |
+|--------|--------------------------|---------------------|
+| Hosting | SaaS / Subscription | Free GitHub Pages |
+| Ownership | Platform controls data | 100% user control |
+| Export | Proprietary, limited | JSON, YAML, JSON-LD |
+| Visibility | Hidden behind logins | Public, AI-indexable |
+| Cost | Monthly fees | $0 |
+| SEO / Geo Ranking | Weak | Strong (GitHub domain authority) |
+
+Paid “AI hiring” tools depend on lock-in;  
+open publishing depends on standards.  
+That is the real economic divide.
+
+---
+
+## The Principle of Selective Openness  
+
+Openness does not mean oversharing.  
+It means *structured transparency* — exposing only what helps machines understand your expertise.  
+
+By defining explicit schemas, you control what becomes public knowledge  
+and prevent data pollution from synthetic CV spam.  
+Even a small JSON file on a trusted domain  
+carries more semantic weight than thousands of closed profiles in a marketing database.  
+
+---
+
+## A Practical Standard for the AI Web  
+
+This approach requires no startup, no funding, no gatekeeper.  
 
 1. Write your CV in plain language.  
-2. Add structured data (`resume.json`, `resume.yml`, `LLM.txt`).  
-3. Host it on GitHub Pages.  
-4. Let search engines and AI crawlers index it.
+2. Convert it to structured formats (`resume.json`, `resume.yml`, `LLM.txt`).  
+3. Publish it on GitHub Pages.  
+4. Let search engines and AI systems index it.  
 
-That’s it.  
-A free, high-trust, AI-discoverable professional identity — under your control.
+That’s all.  
+A **free, verifiable, and AI-readable professional identity** under your control.  
 
 ---
 
-## Closing Argument
+## Closing Argument  
 
-The subscription-based resume economy will collapse under its own inefficiency.  
-Millions of identical AI-generated pages will drown in each other’s noise.  
-The only reliable way forward is **open structure over closed automation**.
+The paid resume economy will collapse under its own duplication.  
+Thousands of “AI-optimized” templates will cannibalize one another in search results.  
+Real expertise will disappear inside uniform, generated noise.  
 
-By publishing transparent, well-defined data — not feeding opaque models —  
-we help AI systems learn to distinguish real expertise from synthetic spam.
+The sustainable alternative is **clarity over marketing, structure over dependence.**  
 
-That is the idea behind the prototype at  
-**[dkharlanau.github.io](https://dkharlanau.github.io/)** —  
-a simple, reproducible pattern for professionals who want to exist  
-not inside someone’s algorithm,  
-but **inside the open, intelligent web.**
+By publishing transparent, machine-readable data  
+instead of uploading to opaque systems,  
+we teach AI to recognize genuine human capability.  
+
+That is the principle behind  
+[**dkharlanau.github.io**](https://dkharlanau.github.io/) —  
+a reproducible prototype for professionals who want to exist  
+not *inside* someone’s algorithm,  
+but *inside* the open, intelligent web.  
