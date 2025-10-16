@@ -137,22 +137,3 @@ This approach requires no startup, no funding, no gatekeeper.
 That’s all.  
 A **free, verifiable, and AI-readable professional identity** under your control.  
 
----
-
-## Closing Argument  
-
-The paid resume economy will collapse under its own duplication.  
-Thousands of “AI-optimized” templates will cannibalize one another in search results.  
-Real expertise will disappear inside uniform, generated noise.  
-
-The sustainable alternative is **clarity over marketing, structure over dependence.**  
-
-By publishing transparent, machine-readable data  
-instead of uploading to opaque systems,  
-we teach AI to recognize genuine human capability.  
-
-That is the principle behind  
-[**dkharlanau.github.io**](https://dkharlanau.github.io/) —  
-a reproducible prototype for professionals who want to exist  
-not *inside* someone’s algorithm,  
-but *inside* the open, intelligent web.  
