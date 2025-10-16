@@ -66,8 +66,7 @@ open data instead of proprietary storage.
 
 ## Example: A Working Prototype  
 
-A proof of concept already exists at  
-[**dkharlanau.github.io**](https://dkharlanau.github.io/)  
+A proof of concept already exists at  [**dkharlanau.github.io**](https://dkharlanau.github.io/)  
 
 This is not another paid resume builder.  
 It is deployed via **GitHub Pages**, a free static hosting platform under a trusted domain.  
