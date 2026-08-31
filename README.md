@@ -18,11 +18,11 @@ The project is intentionally narrow. It demonstrates a reproducible publishing p
 Node.js 20 or later is required. The project has no runtime or development dependencies.
 
 ```bash
-npm test
-npm run build
+npm ci
+npm run verify
 ```
 
-The generated site is written to `dist/`. Open `dist/index.html` locally or serve the directory with any static file server.
+The generated site is written to `dist/`. `verify` validates and tests the source, rebuilds the site, and confirms that the generated representations agree. Open `dist/index.html` locally or serve the directory with any static file server.
 
 Build a different profile:
 
@@ -76,10 +76,27 @@ The HTML embeds the same JSON-LD that is also available as a standalone file. Th
 
 See [`docs/PROFILE-CONTRACT.md`](docs/PROFILE-CONTRACT.md) for field semantics and publication guidance.
 
+## Deploy your own profile
+
+The included GitHub Pages workflow is reusable in a fork, but the example identity and canonical URL must be replaced first. Follow the [deployment and indexing checklist](docs/DEPLOYMENT.md) to set the project-site URL correctly, keep previews noindex, run the post-build verification gate, and inspect the live output before enabling indexing.
+
 ## Repository status
 
 This repository began as an early professional-identity experiment. It is now maintained as a compact reference starter rather than a hosted CV service or recruiting platform.
 
 ## License
 
-No license has been granted yet. The repository is public for inspection and learning; add an explicit license before redistributing or incorporating the code elsewhere.
+MIT. See [`LICENSE`](LICENSE).
+
+## Related projects
+
+- [Agent-Ready Web Profile](https://github.com/dkharlanau/agent-ready-web-profile) can inspect or describe the public surfaces of a deployed profile site. AI CV Builder does not currently emit an ARWP publisher profile, so no ARWP conformance is implied.
+- [Enterprise Architecture Composer](https://github.com/dkharlanau/enterprise-architecture-composer) produces architecture decisions and evidence that may be linked from a skill entry when the artifact is already public and relevant. There is no automated import between the projects.
+- [Visual Workbench](https://github.com/dkharlanau/visual-workbench) can render a public explanatory visual that a profile links to as evidence. AI CV Builder treats the URL as provenance and does not verify the visual's meaning.
+
+## About the author
+
+Created and maintained by **Dzmitryi Kharlanau**, an SAP consultant and system analyst working across enterprise architecture, data, integration, operations, and practical AI.
+
+- [Website and knowledge base](https://dkharlanau.github.io/)
+- [LinkedIn](https://www.linkedin.com/in/dkharlanau/)
