@@ -1,0 +1,39 @@
+{
+  "$schema": "../schema/profile.schema.json",
+  "schemaVersion": "1.0",
+  "id": "https://example.com/#person",
+  "name": "Alex Morgan",
+  "headline": "Enterprise systems consultant",
+  "summary": "Helps teams make operational systems easier to understand, maintain and improve through evidence-backed process and data work.",
+  "url": "https://example.com/",
+  "sameAs": [
+    "https://www.linkedin.com/in/example"
+  ],
+  "skills": [
+    {
+      "name": "Process diagnostics",
+      "evidenceUrl": "https://example.com/work/process-diagnostics"
+    },
+    {
+      "name": "Data quality",
+      "evidenceUrl": "https://example.com/work/data-quality"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Systems consultant",
+      "organization": "Example organization",
+      "start": "2023-01",
+      "end": null,
+      "highlights": [
+        "Mapped support evidence into reusable diagnostic procedures.",
+        "Improved handover quality with explicit ownership and review boundaries."
+      ]
+    }
+  ],
+  "review": {
+    "lastReviewed": "2026-08-31",
+    "publicDataOnly": true,
+    "indexable": false
+  }
+}

@@ -1,72 +1,85 @@
 # AI-Ready CV Builder
 
-> **Status: earlier reference experiment.** This repository is kept public as the original professional-identity prototype. Active development moved to the broader [personal knowledge site](https://dkharlanau.github.io/) and [Agent-Ready Web Profile](https://github.com/dkharlanau/agent-ready-web-profile). Start there for current work.
+A small, dependency-free reference implementation for publishing one professional profile as human-readable HTML, portable JSON and Schema.org JSON-LD.
 
-A small open experiment by **Dzmitryi Kharlanau** for publishing a professional profile as both a human-readable page and portable structured data.
+The project is intentionally narrow. It demonstrates a reproducible publishing pattern; it does not promise search ranking, recruiter discovery, crawler access, AI recommendation or identity verification.
 
-The project explores a simple idea: a CV should not exist only inside a recruiting platform. The same professional identity can also be published under the person's control in formats that are easier for search, retrieval, data processing, and AI-assisted workflows to consume.
+## What it provides
 
-## What the project demonstrates
+- a versioned JSON Schema for the source profile;
+- a non-personal example profile;
+- a validator with explicit, actionable errors;
+- a static-site builder that emits HTML, source JSON and JSON-LD from the same input;
+- deterministic tests for validation, escaping and structured-data output;
+- a GitHub Pages workflow for the generated demonstration site.
 
-A profile can expose several representations from the same source of truth:
+## Quick start
 
-- human-readable HTML
-- structured JSON or YAML
-- Schema.org / JSON-LD where appropriate
-- explicit canonical URLs and identity links
-- machine-readable documentation for supported AI/retrieval use cases
+Node.js 20 or later is required. The project has no runtime or development dependencies.
 
-This improves portability and inspectability. It does **not** guarantee search ranking, recruiter discovery, AI recommendation, crawler access, or inclusion in any external model or index.
+```bash
+npm test
+npm run build
+```
 
-## Reference implementation
+The generated site is written to `dist/`. Open `dist/index.html` locally or serve the directory with any static file server.
 
-The original idea now lives inside a broader public implementation:
+Build a different profile:
 
-- https://dkharlanau.github.io/
+```bash
+node scripts/build-site.mjs \
+  --input path/to/profile.json \
+  --output-dir dist
+```
 
-That site has evolved beyond the CV prototype into a professional profile and enterprise knowledge base covering SAP transformation, enterprise operations, data governance, open-source transformation tooling, and agentic AI.
+Validate without building:
 
-For the current open-source product portfolio, see:
+```bash
+node scripts/validate-profile.mjs path/to/profile.json
+```
 
-- https://dkharlanau.github.io/products/
+## Source profile
 
-## Design principles
+Start from [`examples/profile.example.json`](examples/profile.example.json). The contract is defined in [`schema/profile.schema.json`](schema/profile.schema.json).
 
-### One identity, multiple representations
+The required fields are deliberately modest:
 
-Human-readable and machine-readable versions should describe the same person and use stable identifiers rather than becoming separate, drifting profiles.
+- a stable person identifier and canonical HTTPS URL;
+- name, headline and a short factual summary;
+- at least one skill with a public evidence URL;
+- review metadata confirming that the document contains public data only and explicitly choosing whether it should be indexable.
 
-### Selective openness
+Experience entries are optional. This lets a person publish a useful profile without disclosing employment history that is private, contractually restricted or difficult to verify.
 
-Only information intended to be public should be exposed. Private contacts, compensation information, client-confidential details, internal project data, credentials, and other sensitive information should remain outside the public repository.
+## Publication model
 
-### Standards before proprietary formats
+```text
+profile.json
+    |
+    +-- validate required fields and public URL boundaries
+    |
+    +-- render index.html
+    |
+    +-- copy profile.json
+    |
+    +-- derive profile.jsonld
+```
 
-Prefer ordinary web standards and portable structured formats over platform-specific representations where possible.
+The HTML embeds the same JSON-LD that is also available as a standalone file. The builder escapes user-controlled text and permits only public HTTPS URLs.
 
-### Evidence before visibility claims
+## Privacy and evidence boundaries
 
-Publishing structured data can make information easier to parse and reuse, but discoverability still depends on the behavior and policies of individual search engines, crawlers, retrieval systems, and AI products.
+- Keep private contacts, client names, internal project details, credentials and compensation data out of the source file.
+- Use evidence URLs that a reader can inspect without privileged access.
+- Review dates communicate maintenance state; they do not certify the person or the claims.
+- Structured data improves portability and inspectability. External systems decide whether and how to crawl, index or use it.
 
-## Relationship to current work
+See [`docs/PROFILE-CONTRACT.md`](docs/PROFILE-CONTRACT.md) for field semantics and publication guidance.
 
-Two active projects now cover the useful parts of this experiment at a broader level:
+## Repository status
 
-1. **[dkharlanau.github.io](https://github.com/dkharlanau/dkharlanau.github.io)** is the maintained professional profile, knowledge system, public dataset surface, and product catalog.
-2. **[Agent-Ready Web Profile (ARWP)](https://github.com/dkharlanau/agent-ready-web-profile)** addresses website-level discovery and interface resolution across ordinary web surfaces, structured data, APIs, agent metadata, MCP/A2A-related discovery, and other public interfaces.
+This repository began as an early professional-identity experiment. It is now maintained as a compact reference starter rather than a hosted CV service or recruiting platform.
 
-This repository is therefore useful as a compact historical/reference implementation, not as a competing active product.
+## License
 
-## Author
-
-**Dzmitryi Kharlanau**  
-SAP Transformation · Enterprise Operations · Agentic AI
-
-- Website: https://dkharlanau.github.io/
-- Products: https://dkharlanau.github.io/products/
-- LinkedIn: https://www.linkedin.com/in/dkharlanau/
-- GitHub: https://github.com/dkharlanau
-
-## Status
-
-Earlier experimental reference project. The repository documents an approach to portable professional identity; it should not be interpreted as a claim that a specific search engine or AI system will index, rank, recommend, or verify a published profile.
+No license has been granted yet. The repository is public for inspection and learning; add an explicit license before redistributing or incorporating the code elsewhere.
