@@ -25,6 +25,8 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run verify
       - uses: actions/configure-pages@v6
+      - name: Add consent-aware portfolio analytics
+        run: node scripts/inject-portfolio-analytics.mjs dist
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
