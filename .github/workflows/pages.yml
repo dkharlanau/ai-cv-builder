@@ -27,8 +27,12 @@ jobs:
       - uses: actions/configure-pages@v6
       - name: Stage verified ARWP profile and discovery
         run: node scripts/stage-arwp.mjs dist
+      - name: Add Goose ARWP Proof Mark
+        run: node scripts/inject-goose-proof-mark.mjs dist
       - name: Add consent-aware portfolio analytics
         run: node scripts/inject-portfolio-analytics.mjs dist
+      - name: Verify Proof Mark in final artifact
+        run: grep -q 'data-goose-arwp-proof-mark="0.1"' dist/index.html
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
